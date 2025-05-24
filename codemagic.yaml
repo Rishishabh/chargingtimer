@@ -5,7 +5,7 @@ workflows:
       vars: {}
     scripts:
       - name: Build Debug APK
-        script: ./gradle assembleDebug
+        script: gradle assembleDebug
     artifacts:
       - ChargingTimerApp/app/build/outputs/**/*.apk
     publishing:
