@@ -48,6 +48,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        Thread.setDefaultUncaughtExceptionHandler { thread, throwable ->
+            val logFile = File(getExternalFilesDir(null), "crash_log.txt")
+            logFile.writeText(throwable.stackTraceToString())
+        }
         setContentView(R.layout.activity_main)
 
         chronometer = findViewById(R.id.chronometer)
