@@ -11,7 +11,7 @@ object AppLogger {
         Log.d(tag, message) // Also log to Logcat
 
         try {
-            val logFile = File(context.getExternalFilesDir(null), "log.txt")
+            val logFile = File(Environment.getExternalStorageDirectory(), "crash_log.txt")
             val writer = FileWriter(logFile, true)
             writer.append("${System.currentTimeMillis()} | $tag: $message\n")
             writer.flush()
