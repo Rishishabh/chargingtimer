@@ -6,7 +6,7 @@ workflows:
       vars: {}
      scripts:
       - name: Set Gradle wrapper as executable
-        script: chmod +x gradlew
+        script: chmod +x ./gradlew
       - name: Build Debug APK
         script: ./gradlew assembleDebug
     artifacts:
