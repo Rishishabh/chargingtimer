@@ -3,11 +3,12 @@ workflows:
     max_build_duration: 60
     environment:
       vars: {}
+    working_directory: ChargingTimerApp
     scripts:
       - name: Build Debug APK
         script: gradle assembleDebug
     artifacts:
-      - ChargingTimerApp/app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
