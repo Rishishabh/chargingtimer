@@ -5,7 +5,10 @@ workflows:
     environment:
       vars: {}
     scripts:
-      - ./gradlew assembleDebug
+      - name: Build Debug
+    script: |
+      chmod +x gradlew
+      ./gradlew assembleDebug
     artifacts:
       - app/build/outputs/apk/debug/app-debug.apk
     publishing:
