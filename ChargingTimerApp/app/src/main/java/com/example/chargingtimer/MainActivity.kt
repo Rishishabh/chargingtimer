@@ -10,6 +10,7 @@ import android.os.SystemClock
 import android.widget.Chronometer
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.chargingtimer.utils.AppLogger
 
 class MainActivity : AppCompatActivity() {
 
