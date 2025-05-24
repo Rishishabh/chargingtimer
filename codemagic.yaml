@@ -10,7 +10,7 @@ workflows:
       - name: Build Debug APK
         script: ./gradlew assembleDebug
     artifacts:
-      - app/build/outputs/apk/debug/app-debug.apk
+      - ChargingTimerApp/app/build/outputs/**/*.apk
     publishing:
       email:
         recipients:
