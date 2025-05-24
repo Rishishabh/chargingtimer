@@ -1,11 +1,13 @@
 workflows:
-  android-workflow:
-    name: Build Charging Timer APK
+  android-build:
     max_build_duration: 60
     environment:
-      vars: {}
-     scripts:
+      vars:
+        JAVA_HOME: /opt/android/sdk/java/openjdk-17
+    scripts:
+      - name: Set Gradle wrapper as executable
         script: chmod +x ./gradlew
+      - name: Build Debug APK
         script: ./gradlew assembleDebug
     artifacts:
       - ChargingTimerApp/app/build/outputs/**/*.apk
