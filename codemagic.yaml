@@ -2,8 +2,7 @@ workflows:
   android-build:
     max_build_duration: 60
     environment:
-      vars:
-        JAVA_HOME: /opt/android/sdk/java/openjdk-17
+      vars: {}
     scripts:
       - name: Set Gradle wrapper as executable
         script: chmod +x ./gradlew
