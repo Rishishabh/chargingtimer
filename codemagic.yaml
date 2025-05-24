@@ -1,15 +1,15 @@
 workflows:
-  android-build:
+  flutter-app:
+    name: Flutter App Workflow
     max_build_duration: 60
     environment:
-      vars: {}
-    working_directory: ChargingTimerApp
+      flutter: stable
     scripts:
-      - name: Build Debug APK
-        script: gradle assembleDebug
+      - name: Install dependencies
+        script: flutter pub get
+      - name: Run tests
+        script: flutter test
+      - name: Build APK
+        script: flutter build apk --release
     artifacts:
-      - app/build/outputs/**/*.apk
-    publishing:
-      email:
-        recipients:
-          - rishabhnahata1@gmail.com
+      - build/app/outputs/flutter-apk/app-release.apk
