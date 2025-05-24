@@ -5,6 +5,7 @@ import android.util.Log
 import java.io.File
 import java.io.FileWriter
 import java.io.IOException
+import android.os.Environment
 
 object AppLogger {
     fun log(context: Context, tag: String, message: String) {
