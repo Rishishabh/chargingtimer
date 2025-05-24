@@ -1,0 +1,16 @@
+workflows:
+  android-workflow:
+    name: Build Charging Timer APK
+    max_build_duration: 60
+    environment:
+      flutter: false
+      android:
+        gradle: true
+    scripts:
+      - ./gradlew assembleDebug
+    artifacts:
+      - app/build/outputs/apk/debug/app-debug.apk
+    publishing:
+      email:
+        recipients:
+          - rishabhnahata1@gmail.com
