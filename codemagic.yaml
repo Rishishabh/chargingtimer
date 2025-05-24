@@ -3,8 +3,7 @@ workflows:
     name: Build Charging Timer APK
     max_build_duration: 60
     environment:
-      vars:
-        JAVA_HOME: /usr/lib/jvm/java-11-openjdk
+      vars: {}
     scripts:
       - ./gradlew assembleDebug
     artifacts:
